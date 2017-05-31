@@ -1,7 +1,5 @@
-FROM debian:jessie
-LABEL maintainer "Michaël Perrin <contact@michaelperrin.fr>"
-
-#docker run --rm -v `pwd`:/data my_wkhtmltopdf http://www.ecoguide-it.com/fr/
+FROM ubuntu:yakkety
+LABEL maintainer "Diego Vieira <diego@protos.inf.br>"
 
 RUN apt-get update \
     && apt-get install -y \
