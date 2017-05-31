@@ -2,10 +2,10 @@
 
 ## Usage example
 
-    docker run --rm -v `pwd`:/data michaelperrin/wkhtmltopdf
+    docker run --rm -v `pwd`:/data diego-vieira/wkhtmltopdf \
         --viewport-size 1280x1024 \
         --page-size A4 \
-        http://www.ecoguide-it.com/fr/ \
+        https://github.com/ \
         /data/test.pdf
 
 ### Using Docker Compose
@@ -14,7 +14,7 @@
     version: '3'
     services:
       wkhtmltopdf:
-        image: wkhtmltopdf:latest
+        image: diego-vieira/wkhtmltopdf:latest
         volumes:
           - .:/data
 
@@ -23,5 +23,5 @@ Run:
     docker-compose run --rm wkhtmltopdf \
         --viewport-size 1280x1024 \
         --page-size A4 \
-        http://www.ecoguide-it.com/fr/ \
+        https://github.com/ \
         /data/test.pdf
