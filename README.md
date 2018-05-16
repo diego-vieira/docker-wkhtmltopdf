@@ -2,7 +2,7 @@
 
 ## Usage example
 
-    docker run --rm -v `pwd`:/data diego-vieira/wkhtmltopdf \
+    docker run --rm -v `pwd`:/data diegovieira/wkhtmltopdf \
         --viewport-size 1280x1024 \
         --page-size A4 \
         https://github.com/ \
@@ -14,7 +14,7 @@
     version: '3'
     services:
       wkhtmltopdf:
-        image: diego-vieira/wkhtmltopdf:latest
+        image: diegovieira/wkhtmltopdf:latest
         volumes:
           - .:/data
 
